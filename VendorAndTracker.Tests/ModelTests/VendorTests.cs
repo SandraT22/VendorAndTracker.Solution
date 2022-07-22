@@ -44,7 +44,7 @@ namespace VendorAndTracker.Tests
       newVendor.VendorName = updatedName;
       string result = newVendor.VendorName;
 
-      Assert.AreEqual(name, result);
+      Assert.AreEqual(updatedName, result);
     }
   }
 }
