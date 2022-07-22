@@ -46,5 +46,20 @@ namespace VendorAndTracker.Tests
 
       Assert.AreEqual(updatedName, result);
     }
+
+    [TestMethod]
+    public void SetVendorAddress_SetVendorAddress_String()
+    {
+      string name = "Test Vendor";
+      string address = "test address";
+      string contact = "Test contact";
+      Vendor newVendor = new Vendor(name, address, contact);
+
+      string updatedAddress = "First Address";
+      newVendor.VendorAddress = updatedAddress;
+      string result = newVendor.VendorAddress;
+
+      Assert.AreEqual(address, result);
+    }
   }
 }
