@@ -98,7 +98,7 @@ namespace VendorAndTracker.Tests
       string description1 = "Test";
       int orderPrice = 12;
       string orderDate = "6/22/22";
-      Order newOrder = new Order(name01, description1, orderPrice1, orderDate1);
+      Order newOrder = new Order(name01, description1, orderPrice, orderDate);
 
       int result = newOrder.Id;
 
