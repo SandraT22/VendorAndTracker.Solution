@@ -8,9 +8,10 @@ namespace VendorAndTracker.Models
     public int Id{ get; }
     private static List<Order> _instances = new List<Order> {};
 
-    public Order(string orderName)
+    public Order(string orderName, string orderDescription)
     {
       OrderName = orderName;
+      OrderDescription = orderDescription;
       _instances.Add(this);
       Id = _instances.Count;
     }

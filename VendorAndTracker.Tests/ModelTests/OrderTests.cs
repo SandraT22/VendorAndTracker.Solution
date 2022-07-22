@@ -44,9 +44,33 @@ namespace VendorAndTracker.Tests
     }
 
     [TestMethod]
+    public void OrderConstructor_GetOrderDescription_String()
+    {
+      string orderName = "Test Order";
+      string orderDescription = "100 Pastries"
+      Order newOrder = new Order(orderName, orderDescription);
+      string result = newOrder.OrderDescription;
+      Assert.AreEqual(orderDescription, result);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {
       List<Order> newList = new List<Order> { };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+     [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string name01 = "Test Name";
+      string name02 = "First Order";
+      Order newOrder1 = new Order(name01);
+      Order newOrder2 = new Order(name02);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
 
