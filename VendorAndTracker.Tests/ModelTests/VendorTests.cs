@@ -74,7 +74,7 @@ namespace VendorAndTracker.Tests
       newVendor.VendorContact = updatedContact;
       string result = newVendor.VendorContact;
 
-      Assert.AreEqual(contact, result);
+      Assert.AreEqual(updatedContact, result);
     }
   }
 }
