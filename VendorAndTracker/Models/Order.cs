@@ -5,6 +5,7 @@ namespace VendorAndTracker.Models
   public class Order
   {
     public string OrderName { get; set; }
+    public string OrderDescription { get; set; }
     public int Id{ get; }
     private static List<Order> _instances = new List<Order> {};
 
