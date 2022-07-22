@@ -24,11 +24,26 @@ namespace VendorAndTracker.Tests
     [TestMethod]
     public void VendorConstructor_GetVendorName_String()
     {
-      string name = "Test Order";
+      string name = "Test Vendor";
       string address = "test address";
       string contact = "Test contact";
       Vendor newVendor = new Vendor(name, address, contact);
       string result = newVendor.VendorName;
+      Assert.AreEqual(name, result);
+    }
+
+    [TestMethod]
+    public void SetVendorName_SetVendorName_String()
+    {
+      string name = "Test Vendor";
+      string address = "test address";
+      string contact = "Test contact";
+      Vendor newVendor = new Vendor(name, address, contact);
+
+      string updatedName = "First Vendor";
+      newVendor.VendorName = updatedName;
+      string result = newVendor.VendorName;
+
       Assert.AreEqual(name, result);
     }
   }
