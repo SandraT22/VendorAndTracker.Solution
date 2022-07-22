@@ -6,13 +6,13 @@ using System;
 namespace VendorAndTracker.Tests
 {
   [TestClass]
-  public class VendorTests //: //IDisposable
+  public class VendorTests : IDisposable
   {
 
-  // public void Dispose()
-  // {
-  //   Category.ClearAll();
-  // }
+  public void Dispose()
+  {
+    Category.ClearAll();
+  }
 
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -75,6 +75,16 @@ namespace VendorAndTracker.Tests
       string result = newVendor.VendorContact;
 
       Assert.AreEqual(updatedContact, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_VendorList()
+    {
+      List<Vendor> newList = new List<Vendor> { };
+
+      List<Vendor> result = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
