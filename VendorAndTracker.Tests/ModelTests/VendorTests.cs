@@ -59,7 +59,7 @@ namespace VendorAndTracker.Tests
       newVendor.VendorAddress = updatedAddress;
       string result = newVendor.VendorAddress;
 
-      Assert.AreEqual(address, result);
+      Assert.AreEqual(updatedAddress, result);
     }
   }
 }
