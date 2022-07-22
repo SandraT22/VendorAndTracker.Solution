@@ -46,7 +46,7 @@ namespace VendorAndTracker.Tests
     [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {
-      List<Order> newOrder = new List<Order> { };
+      List<Order> newList = new List<Order> { };
 
       List<Order> result = Order.GetAll();
 
