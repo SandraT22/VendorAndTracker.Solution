@@ -47,7 +47,7 @@ namespace VendorAndTracker.Tests
     public void OrderConstructor_GetOrderDescription_String()
     {
       string orderName = "Test Order";
-      string orderDescription = "100 Pastries"
+      string orderDescription = "100 Pastries";
       Order newOrder = new Order(orderName, orderDescription);
       string result = newOrder.OrderDescription;
       Assert.AreEqual(orderDescription, result);
