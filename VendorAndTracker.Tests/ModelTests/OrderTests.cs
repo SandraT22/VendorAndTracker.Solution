@@ -20,6 +20,7 @@ namespace VendorAndTracker.Tests
       Order newOrder = new Order("test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
     [TestMethod]
     public void OrderConstructor_GetOrderName_String()
     {
@@ -28,20 +29,29 @@ namespace VendorAndTracker.Tests
       string result = newOrder.OrderName;
       Assert.AreEqual(orderName, result);
     }
+
     [TestMethod]
     public void SetOrderName_SetOrderName_String()
     {
-      //Arrange
       string orderName = "Test Order";
       Order newOrder = new Order(orderName);
 
-      //Act
       string updatedName = "First Order";
       newOrder.OrderName = updatedName;
       string result = newOrder.OrderName;
 
-      //Assert
       Assert.AreEqual(updatedName, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newOrder = new List<Order> { };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
+
   }
 }
