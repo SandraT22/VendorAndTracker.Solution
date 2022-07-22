@@ -17,7 +17,7 @@ namespace VendorAndTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfRecord_Record()
     {
-      Order newOrder = new Order("test");
+      Order newOrder = new Order("test", "description");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,7 +25,8 @@ namespace VendorAndTracker.Tests
     public void OrderConstructor_GetOrderName_String()
     {
       string orderName = "Test Order";
-      Order newOrder = new Order(orderName);
+      string orderDescription = "100 Pastries";
+      Order newOrder = new Order(orderName, orderDescription);
       string result = newOrder.OrderName;
       Assert.AreEqual(orderName, result);
     }
@@ -34,7 +35,8 @@ namespace VendorAndTracker.Tests
     public void SetOrderName_SetOrderName_String()
     {
       string orderName = "Test Order";
-      Order newOrder = new Order(orderName);
+      string orderDescription = "100 Pastries";
+      Order newOrder = new Order(orderName, orderDescription);
 
       string updatedName = "First Order";
       newOrder.OrderName = updatedName;
