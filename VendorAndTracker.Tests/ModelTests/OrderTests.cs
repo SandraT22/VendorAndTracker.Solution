@@ -37,11 +37,11 @@ namespace VendorAndTracker.Tests
 
       //Act
       string updatedName = "First Order";
-      newOrder.OrderName = updatedOrderName;
+      newOrder.OrderName = updatedName;
       string result = newOrder.OrderName;
 
       //Assert
-      Assert.AreEqual(updatedName, result);
+      Assert.AreEqual(orderName, result);
     }
   }
 }
