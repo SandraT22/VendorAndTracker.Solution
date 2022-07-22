@@ -98,7 +98,7 @@ namespace VendorAndTracker.Tests
       string contact2 = "contact2";
       Vendor newVendor1 = new Vendor(name01, address1, contact1);
       Vendor newVendor2 = new Vendor(name02, address2, contact2);
-      List<Vendor> newList = new List<Vendor> { newOrder1, newOrder2 };
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
       List<Vendor> result = Vendor.GetAll();
 
