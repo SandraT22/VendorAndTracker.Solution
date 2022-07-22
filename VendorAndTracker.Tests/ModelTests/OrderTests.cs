@@ -86,7 +86,7 @@ namespace VendorAndTracker.Tests
     {
       string name01 = "Test Name";
       string description1 = "Test";
-      Oreder newOrder = new Order(name01, description1);
+      Order newOrder = new Order(name01, description1);
 
       int result = newOrder.Id;
 
