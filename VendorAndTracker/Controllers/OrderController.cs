@@ -10,7 +10,7 @@ namespace VendorAndTracker.Controllers
     public ActionResult New(int vendorId)
     {
       Vendor newVendor = Vendor.Find(vendorId);
-      return View(Vendor);
+      return View(newVendor);
     }
 
      [HttpGet("/vendors/{vendorId}/orders/{orderId}")]

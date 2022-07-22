@@ -23,7 +23,7 @@
 
 ## Known Bugs
 
-* No known bugs
+* 
 
 ## License
 MIT
