@@ -67,9 +67,11 @@ namespace VendorAndTracker.Tests
     public void GetAll_ReturnsOrders_OrderList()
     {
       string name01 = "Test Name";
+      string description1 = "Test";
       string name02 = "First Order";
-      Order newOrder1 = new Order(name01);
-      Order newOrder2 = new Order(name02);
+      string description2 = "100";
+      Order newOrder1 = new Order(name01, description1);
+      Order newOrder2 = new Order(name02, description2);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
