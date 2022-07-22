@@ -104,5 +104,18 @@ namespace VendorAndTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnVendorId_Int()
+    {
+      string name01 = "Test Name";
+      string address1 = "Test1";
+      string contact1 = "contact1";
+      Vendor newVendor = new Vendor(name01, address1, contact1);
+
+      int result = newVendor.Id;
+
+      Assert.AreEqual(2, result);
+    }
   }
 }
