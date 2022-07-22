@@ -105,7 +105,7 @@ namespace VendorAndTracker.Tests
 
       Order result = Order.Find(2);
 
-      Assert.AreEqual(newOrder1, result);
+      Assert.AreEqual(newOrder2, result);
     }
 
   }
