@@ -41,7 +41,7 @@ namespace VendorAndTracker.Tests
       string result = newOrder.OrderName;
 
       //Assert
-      Assert.AreEqual(orderName, result);
+      Assert.AreEqual(updatedName, result);
     }
   }
 }
