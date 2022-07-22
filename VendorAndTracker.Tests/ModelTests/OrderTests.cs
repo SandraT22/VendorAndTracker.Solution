@@ -11,7 +11,7 @@ namespace VendorAndTracker.Tests
 
     public void Dispose()
     {
-      Item.ClearAll();
+      Order.ClearAll();
     }
 
     [TestMethod]
