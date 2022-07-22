@@ -17,7 +17,7 @@ namespace VendorAndTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfRecord_Record()
     {
-      Order newOrder = new Order("test", "description");
+      Order newOrder = new Order("test", "description", 0, "date");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -26,7 +26,9 @@ namespace VendorAndTracker.Tests
     {
       string orderName = "Test Order";
       string orderDescription = "100 Pastries";
-      Order newOrder = new Order(orderName, orderDescription);
+      int orderPrice = 12;
+      string orderDate = "6/22/22";
+      Order newOrder = new Order(orderName, orderDescription, orderPrice, orderDate);
       string result = newOrder.OrderName;
       Assert.AreEqual(orderName, result);
     }
@@ -36,7 +38,9 @@ namespace VendorAndTracker.Tests
     {
       string orderName = "Test Order";
       string orderDescription = "100 Pastries";
-      Order newOrder = new Order(orderName, orderDescription);
+      int orderPrice = 12;
+      string orderDate = "6/22/22";
+      Order newOrder = new Order(orderName, orderDescription,orderPrice, orderDate);
 
       string updatedName = "First Order";
       newOrder.OrderName = updatedName;
@@ -50,7 +54,9 @@ namespace VendorAndTracker.Tests
     {
       string orderName = "Test Order";
       string orderDescription = "100 Pastries";
-      Order newOrder = new Order(orderName, orderDescription);
+      int orderPrice = 12;
+      string orderDate = "6/22/22";
+      Order newOrder = new Order(orderName, orderDescription, orderPrice, orderDate);
       string result = newOrder.OrderDescription;
       Assert.AreEqual(orderDescription, result);
     }
@@ -70,10 +76,14 @@ namespace VendorAndTracker.Tests
     {
       string name01 = "Test Name";
       string description1 = "Test";
+      int orderPrice1 = 12;
+      string orderDate1 = "6/22/22";
       string name02 = "First Order";
       string description2 = "100";
-      Order newOrder1 = new Order(name01, description1);
-      Order newOrder2 = new Order(name02, description2);
+      int orderPrice2 = 11;
+      string orderDate2 = "6/20/22";
+      Order newOrder1 = new Order(name01, description1, orderPrice1, orderDate1);
+      Order newOrder2 = new Order(name02, description2, orderPrice2, orderDate2);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
@@ -86,7 +96,9 @@ namespace VendorAndTracker.Tests
     {
       string name01 = "Test Name";
       string description1 = "Test";
-      Order newOrder = new Order(name01, description1);
+      int orderPrice = 12;
+      string orderDate = "6/22/22";
+      Order newOrder = new Order(name01, description1, orderPrice1, orderDate1);
 
       int result = newOrder.Id;
 
@@ -98,10 +110,14 @@ namespace VendorAndTracker.Tests
     {
       string name01 = "Test Name";
       string description1 = "Test";
+      int orderPrice1 = 12;
+      string orderDate1 = "6/22/22";
       string name02 = "First Order";
       string description2 = "100";
-      Order newOrder1 = new Order(name01, description1);
-      Order newOrder2 = new Order(name02, description2);
+      int orderPrice2 = 11;
+      string orderDate2 = "6/20/22";
+      Order newOrder1 = new Order(name01, description1, orderPrice1, orderDate1);
+      Order newOrder2 = new Order(name02, description2, orderPrice2, orderDate2);
 
       Order result = Order.Find(2);
 
