@@ -28,5 +28,20 @@ namespace VendorAndTracker.Tests
       string result = newOrder.OrderName;
       Assert.AreEqual(orderName, result);
     }
+    [TestMethod]
+    public void SetOrderName_SetOrderName_String()
+    {
+      //Arrange
+      string orderName = "Test Order";
+      Order newOrder = new Order(orderName);
+
+      //Act
+      string updatedName = "First Order";
+      newOrder.OrderName = updatedOrderName;
+      string result = newOrder.OrderName;
+
+      //Assert
+      Assert.AreEqual(updatedName, result);
+    }
   }
 }
