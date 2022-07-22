@@ -115,7 +115,7 @@ namespace VendorAndTracker.Tests
 
       int result = newVendor.Id;
 
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
   }
 }
